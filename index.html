@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Giant Check Branch Finder</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=1">
+		<link rel="stylesheet" href="style.css">
+		<script src="https://unpkg.com/vue" defer></script>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<h1>Giant Check Branch Finder</h1>
+		<div id="app">
+			<p>My check is <input v-model="checkWidth"></input> in. wide</p> 
+			<button v-on:click="getBranchData()">Find branches</button> <button v-on:click="toggleFilter()">Toggle branches with large-enough windows</button>
+			<div id="branches" v-if="filtered == false">
+				<div v-for="branch in branches" v-bind:class="getClass(branch[2])">
+					<p class="title">{{ branch[0] }}</p> <!-- name -->
+					<p>{{ branch[1] }} miles</p>
+					<p>{{ branch[2] }}-inch window</p>
+				</div>
+			</div>
+			
+			<div id="branches" v-if="filtered">
+				<div v-for="branch in filteredBranches" v-bind:class="getClass(branch[2])">
+					<p class="title">{{ branch[0] }}</p> <!-- name -->
+					<p>{{ branch[1] }} miles</p>
+					<p>{{ branch[2] }}-inch window</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

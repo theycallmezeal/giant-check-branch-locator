@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
+
+body {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Roboto Slab;
+}
+
+h1 {
+	color: #001942;
+}
+
+input, button {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+button {
+	background-color: #114291;
+	border: none;
+	color: white;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+#branches {
+	display: flex;
+	max-width: 100%;
+	flex-wrap: wrap;
+}
+
+#branches > div {
+	border-radius: 5px;
+	border: solid 1px #eeeeee;
+	padding: 10px;
+	margin: 10px;
+	color: #888888;
+}
+
+.title {
+	color: #001942;
+}
+
+.good {
+	-webkit-box-shadow: 0px 0px 12px 0px rgba(110,255,110,1);
+	-moz-box-shadow: 0px 0px 12px 0px rgba(110,255,110,1);
+	box-shadow: 0px 0px 12px 0px rgba(110,255,110,1);
+}
+
+.bad {
+	-webkit-box-shadow: 0px 0px 12px 0px rgba(255,133,112,1);
+	-moz-box-shadow: 0px 0px 12px 0px rgba(255,133,112,1);
+	box-shadow: 0px 0px 12px 0px rgba(255,133,112,1);
+}
